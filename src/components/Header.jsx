@@ -1,27 +1,25 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { IoMoonOutline, IoMoon } from "react-icons/io5";
 
 import { Container } from './Container'
 
 const HeaderEl = styled.header`
-    box-shadow: var(--shadow);
-    background-color: var(--colors-ui-base);
-    `;
+  box-shadow: var(--shadow);
+  background-color: var(--colors-ui-base);
+`;
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    @media (min-width: 767px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }`;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+`;
 
-const Title = styled.a.attrs({
-    href: '/',
+const Title = styled(Link).attrs({
+    to: '/',
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);
