@@ -5,12 +5,12 @@ import Card from '../components/Card';
 import Controls from '../components/Controls';
 import List from '../components/List';
 import { ALL_COUNTRIES } from '../config';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
-export default function HomePage({ countries, setCountries}) {
+export default function HomePage({ countries, setCountries }) {
 
 
     const [filtredCountries, setfiltredCountries] = useState(countries)
@@ -20,29 +20,32 @@ export default function HomePage({ countries, setCountries}) {
 
     const handleSearch = (search, region) => {
         let data = [...countries]
-        
-        if (region) { 
+
+        if (region) {
             data = data.filter(c => c.region.includes(region))
         }
 
-        if (search) { 
+        if (search) {
             data = data.filter(c => c.name.toLowerCase().includes(search.toLowerCase()))
 
         }
 
 
         setfiltredCountries(data)
-}
+    }
 
 
     useEffect(() => {
         if (!countries.length)
-        axios.get(ALL_COUNTRIES)
-            .then(({ data }) => setCountries(data))
+            axios.get(ALL_COUNTRIES)
+                .then(({ data }) => setCountries(data))
 
     }, [])
 
 
+    useEffect(() => {
+        handleSearch()
+    }, [countries])
 
 
     return (
