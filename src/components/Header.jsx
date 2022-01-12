@@ -59,15 +59,15 @@ export default function Header() {
         <HeaderEl>
             <Container>
                 <Wrapper>
-                    <Title> Where is the world? </Title>
+                    <Link to='/'> <Title> Where is the world? </Title> </Link>
                     <ModeSwitcher onClick={toggleTheme}>
                         {theme === 'ligth'
                             ? (<IoMoonOutline size="14px" />)
                             : (<IoMoon size="14px" />)
                         }
                         <span style={{ marginLeft: '0.75rem' }}> {theme} Theme</span>
-                        </ModeSwitcher>
-                   
+                    </ModeSwitcher>
+
                 </Wrapper>
             </Container>
         </HeaderEl>
