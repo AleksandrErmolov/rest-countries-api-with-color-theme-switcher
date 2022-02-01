@@ -1,0 +1,27 @@
+.list__item {
+    min-width: 200px;
+    height: auto;
+}
+
+
+.list__item:hover {
+    color: #8080ff;
+    background-color: #ddf8f8;
+    border-radius: 10px;
+}
+
+.search__list {
+    border-radius: 10px ;
+    background-color: azure;
+    position: absolute;
+    top: 39px;
+    left: 35px;
+    list-style-type: none;
+    max-height: 300px;
+    overflow: auto;
+    z-index: 9999;
+}
+
+.search__list::-webkit-scrollbar {
+    display: none;
+}

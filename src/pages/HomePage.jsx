@@ -50,7 +50,7 @@ export default function HomePage({ countries, setCountries }) {
 
     return (
         <div>
-            <Controls onSearch={handleSearch} />
+            <Controls onSearch={handleSearch} countries={countries}/>
             <List>
                 {
                     filtredCountries.map(c => {

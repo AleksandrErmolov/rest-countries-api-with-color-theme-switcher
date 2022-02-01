@@ -66,8 +66,8 @@ export default function Header() {
                             : (<IoMoon size="14px" />)
                         }
                         <span style={{ marginLeft: '0.75rem' }}> {theme} Theme</span>
-                    </ModeSwitcher>
-
+                        </ModeSwitcher>
+                   
                 </Wrapper>
             </Container>
         </HeaderEl>

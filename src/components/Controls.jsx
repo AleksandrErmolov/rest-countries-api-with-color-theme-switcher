@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function Controls({onSearch}) {
+export default function Controls({onSearch, countries }) {
 
     const [search, setSearch] = useState('')
   const [region, setRegion] = useState('')
@@ -34,7 +34,7 @@ export default function Controls({onSearch}) {
 
     return (
         <Wrapper>
-            <Search search={search} setSearch={setSearch} />
+            <Search search={search} setSearch={setSearch} countries={countries} region={region} onSearch={onSearch}/>
             <CustomSelect
                 options={options}
                 placeholder='Filter by Region'

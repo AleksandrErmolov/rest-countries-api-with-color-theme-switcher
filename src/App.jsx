@@ -22,7 +22,6 @@ function App() {
           <Route path="/" element={<HomePage countries={countries} setCountries={setCountries}   />} />
           <Route path="/country/:name" element={<Details />} />
           <Route path="*" element={<NotFound />} />
-
         </Routes>
       </Main>
     </>
